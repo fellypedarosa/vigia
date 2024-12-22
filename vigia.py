@@ -13,7 +13,7 @@ import pyautogui
 import re
 import pyperclip
 ######################################### CAMERA ########################################################
-sleep(0)
+sleep(0) #Ajuste conforme a necessidade para iniciar o programa
 # Obtém o diretório atual do script
 diretorio_atual = os.path.dirname(os.path.abspath(__file__))
 
@@ -108,7 +108,7 @@ try:
                 historico_conversa = historico_conversa[-1200:]    
         ################################ WhatApp! ################################################################
         ############################################### Parar ####################################################
-            parada_forcada = r"Dora-p1ano.CachorroQu3nte"
+            parada_forcada = r"Desativar.Vigia" #Altere conforme necessidade para interromper o vigia ao ler a mensagem (Cuidado, para iniciar o vigia novamente a frase/palavra precisa ser excluida na conversa do WP)
             forcar = re.search(parada_forcada, historico_conversa)
             if forcar:
                 print('Forçado a Parada!')
@@ -148,12 +148,12 @@ try:
                     sleep(1)
             
                 # Encontrar o botão para anexar e clicar
-                anexar_btn = navegador.find_element(By.CLASS_NAME, 'x9f619.x78zum5.x6s0dn4.xl56j7k.x1ofbdpd._ak1m')
+                anexar_btn = navegador.find_element(By.CLASS_NAME, 'x9f619.x78zum5.x6s0dn4.xl56j7k.x1ofbdpd._ak1m') #Mudar conforme CLASS_NAME do botão de anexar arquivos do WP Web
                 anexar_btn.click()
                 sleep(1)
             
                 # Clicar na opção "Foto/Vídeo"
-                foto_video_btn = navegador.find_element(By.XPATH, '//*[@id="app"]/div/span[5]/div/ul/div/div/div[2]/li')
+                foto_video_btn = navegador.find_element(By.XPATH, '//*[@id="app"]/div/span[5]/div/ul/div/div/div[2]/li') #Mudar conforme XPATH do botão Foto ou Video do WP Web
                 foto_video_btn.click()
                 sleep(2)
                 
@@ -164,7 +164,7 @@ try:
                 sleep(1)
             
                 # Encontrar o botão de envio e clicar
-                enviar_btn = navegador.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div/div[2]/div[2]/span/div/div/div/div[2]/div/div[2]/div[2]/div')  # Atualize para o novo seletor
+                enviar_btn = navegador.find_element(By.XPATH, '//*[@id="app"]/div/div[3]/div/div[2]/div[2]/span/div/div/div/div[2]/div/div[2]/div[2]/div')  #Mudar conforme XPATH do botão de enviar mensagem com imagem do WP
                 enviar_btn.click()
                 print("Imagem enviada com sucesso!")
             except Exception as e:
