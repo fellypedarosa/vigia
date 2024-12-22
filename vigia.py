@@ -52,13 +52,15 @@ navegador.get('https://web.whatsapp.com/')
 sleep(8) #Ajuste conforme necessidade para poder escanear o QR Code
 ultimo_registro = time.time()
 
-notificacoes = navegador.find_elements(By.CLASS_NAME, '_ahlk')
+notificacoes = navegador.find_elements(By.CLASS_NAME, '_ahlk') #Mudar conforme CLASS_NAME
+                anexar_btn.click()
 if notificacoes:
     notificacoes[0].click()
     sleep(1)
 ##################################### FUNCAO PARA ENVIAR MSG ##################################################
 def enviar_mensagem():
-    barra_mensagem = navegador.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div/div[1]/p') # Muda
+    barra_mensagem = navegador.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div/div[1]/p') #Mudar conforme XPATH
+                anexar_btn.click()
     barra_mensagem.send_keys(Keys.CONTROL + "v")
     sleep(1)
     barra_mensagem.send_keys(Keys.ENTER)
@@ -72,7 +74,7 @@ enviar_mensagem()
 try:
     while True:
         ################################ WhatApp #################################################################
-        notificacoes = navegador.find_elements(By.CLASS_NAME, '_ahlk')
+        notificacoes = navegador.find_elements(By.CLASS_NAME, '_ahlk') #Mudar conforme CLASS_NAME
         if notificacoes:
             notificacoes[0].click()
             sleep(1)
