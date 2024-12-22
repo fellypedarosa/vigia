@@ -59,6 +59,13 @@ vigia.py
 - WebDriver Manager
 - PyAutoGUI
 - Pyperclip
+  
+## Como Obter XPATH e CLASS_NAME
+CLASS_NAME:
+<img alt="Exemplo de CLASS_NAME" src="https://github.com/user-attachments/assets/0b703bf1-7bf3-49cf-8013-9df0c9bb9799">
+XPATH:
+<img alt="Exemplo de XPATH" src="https://github.com/user-attachments/assets/e2fb39fa-57cb-4eda-8065-6163639e75f3">
+
 
 ## Licença
 
