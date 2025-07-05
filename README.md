@@ -118,6 +118,4 @@ Para ativar envio de e-mails automáticos:
 Desenvolvido com ❤️ usando Lovable
 
 ### Rodar localmente
-´
-npm run dev
-´
+- `npm run dev`
