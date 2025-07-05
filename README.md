@@ -116,3 +116,8 @@ Para ativar envio de e-mails automáticos:
 - **Rede**: Zero - tudo roda localmente
 
 Desenvolvido com ❤️ usando Lovable
+
+### Rodar localmente
+´
+npm run dev
+´
